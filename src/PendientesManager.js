@@ -1,8 +1,19 @@
 let Pendientes=[]
 
+function showEmptyTitleAlert()
+{
+    alert("No es posible registrar una tarea pendiente sin descripción")
+}
 function addPendiente(pendienteTitle)
 {
-    Pendientes.push(pendienteTitle)
+    if(pendienteTitle=="" || pendienteTitle==" " )
+    {
+        showEmptyTitleAlert()
+    }
+    else
+    {
+        Pendientes.push(pendienteTitle)
+    }
 }
 function showPendientes(ListaPendientesContainer)
 {
