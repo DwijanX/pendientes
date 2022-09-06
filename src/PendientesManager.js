@@ -23,14 +23,19 @@ function addPendiente(pendienteTitle)
         Pendientes.push(pendienteTitle)
     }
 }
+function getTodoTitleList()
+{
+    return "<h3>TODOs("+Pendientes.length+")</h3>"
+}
 function showPendientes(ListaPendientesContainer)
 {
-    let PendientesHtml=""
+    let PendientesHtmlans=""
+    PendientesHtmlans+=getTodoTitleList()
     Pendientes.forEach((Pendiente)=>
     {
-        PendientesHtml+="<p>"+Pendiente+"</p>"
+        PendientesHtmlans+="<p>"+Pendiente+"</p>"
     })
-    ListaPendientesContainer.innerHTML=PendientesHtml
+    ListaPendientesContainer.innerHTML=PendientesHtmlans
 }
 
 export {addPendiente,showPendientes}

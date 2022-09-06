@@ -10,3 +10,9 @@ form.addEventListener("submit", (event) => {
   addPendiente(pendiente)
   showPendientes(ListaPendientes)
 });
+
+function LoadFunction()
+{
+  showPendientes(ListaPendientes)
+}
+document.onload=LoadFunction()
