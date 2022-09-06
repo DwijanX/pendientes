@@ -1,15 +1,12 @@
-import sumar from "./sumador";
-
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+import { addPendiente,showPendientes } from "./PendientesManager";
+const tareaPendiente = document.querySelector("#tareaPendiente");
+const form = document.querySelector("#pendientes-form");
+const ListaPendientes = document.querySelector("#ListaPendientes");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  let pendiente = tareaPendiente.value
+  addPendiente(pendiente)
+  showPendientes(ListaPendientes)
 });
